@@ -8,24 +8,51 @@
         color: #c95068;
         color: white;
         font-family: sans-serif;
-        font-size: 14pt;
-        letter-spacing: -0.05em;
+        font-size: 34pt;
+        letter-spacing: -0.10em;
         font-style: italic;
         /* transform: scaleY(1.4); */
+        color: #FFFFFF;
+        background: #232323;
+        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+      }
+      #A {
+        margin-left: -0.3em;
+        margin-top: 1em;
+        line-height: 1.25em;
       }
     </style>
   </head>
   <body>
-    <div id="but-my-watch-sick"></div>
-    <div id="yea-my-drop-sick">but don't</div>
-    <div id="yea-my-glock-sick">worry</div>
-    <div id="and-my-knot-thick">about everything that</div>
-    <div id="i'm it">...</div>
+    <div id="A">
+      <div id="but-my-watch-sick"></div>
+      <div>BUT DON'T</div>
+      <div id="yea-my-drop-sick"></div>
+      <div>WORRY</div>
+      <div id="yea-my-glock-sick"></div>
+      <div>ABOUT EVERYTHING</div>
+      <div id="and-my-knot-thick"></div>
+      <div id="im-it">THAT</div>
+    </div>
+
     <script>
-      var el = document.getElementById("but-my-watch-sick");
-      var when = new Date(2019, 6, 27, 5, 0, 0, 0);
+      var el1 = document.getElementById("but-my-watch-sick");
+      var el2 = document.getElementById("yea-my-drop-sick");
+      var el3 = document.getElementById("yea-my-glock-sick");
+      var el4 = document.getElementById("and-my-knot-thick");
+      var el5 = document.getElementById("im-it");
+
+      var when = new Date(2019, 5, 27, 5, 0, 0, 0);
+
       (function yeah_my_drop_sick () {
-        el.innerHTML = ((when - new Date())/1000.);
+        var s = (when - new Date())/1000.;
+        var m = s / 60.;
+        var h = m / 60.;
+        var d = h / 24.;
+        el1.innerHTML = (s % 60);
+        el2.innerHTML = Math.floor(m % 60);
+        el3.innerHTML = Math.floor(h % 24);
+        el4.innerHTML = Math.floor(d);
         requestAnimationFrame(yeah_my_drop_sick);
       }())
 
