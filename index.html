@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=500,initial-scale=1">
     <title>i'm ill not sick</title>
     <style>
       body {
@@ -11,16 +12,22 @@
         font-size: 34pt;
         letter-spacing: -0.130em;
         font-style: italic;
-        /* transform: scaleY(1.4); */
+      }
+
+      #A {
+        margin-left: -0.3em;
+        margin-top: 4em;
+        line-height: 1.25em;
         color: #FFFFFF;
         background: black;
         text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #f95ee2, 0 0 30px #f95ee2, 0 0 40px #f95ee2, 0 0 55px #f95ee2, 0 0 75px #ed21ce;
       }
 
-      #A {
-        margin-left: -0.3em;
-        margin-top: 1em;
-        line-height: 1.25em;
+      #B {
+        position: fixed;
+        top: 4em;
+        left: 15em;
+        color: rgb(33, 33, 33);
       }
     </style>
   </head>
@@ -37,26 +44,28 @@
     </div>
 
     <script>
-      var el1 = document.getElementById("but-my-watch-sick");
-      var el2 = document.getElementById("yea-my-drop-sick");
-      var el3 = document.getElementById("yea-my-glock-sick");
-      var el4 = document.getElementById("and-my-knot-thick");
-      var el5 = document.getElementById("im-it");
-
+      var imyour = document.getElementById("but-my-watch-sick");
+      var friendi = document.getElementById("yea-my-drop-sick");
+      var willtalk = document.getElementById("yea-my-glock-sick");
+      var you = document.getElementById("and-my-knot-thick");
+      var throughthis = document.getElementById("im-it");
       var when = new Date(2019, 5, 27, 5, 0, 0, 0);
-
       (function yeah_my_drop_sick () {
         var s = (when - new Date())/1000.;
         var m = s / 60.;
         var h = m / 60.;
         var d = h / 24.;
-        el1.innerHTML = (s % 60);
-        el2.innerHTML = Math.floor(m % 60);
-        el3.innerHTML = Math.floor(h % 24);
-        el4.innerHTML = Math.floor(d);
+        imyour.innerHTML = (s % 60);
+        friendi.innerHTML = Math.floor(m % 60);
+        willtalk.innerHTML = Math.floor(h % 24);
+        you.innerHTML = Math.floor(d);
         requestAnimationFrame(yeah_my_drop_sick);
       }())
-
     </script>
+
+    <div id="B">
+      why are you here?
+    </div>
+    <script>
   </body>
 </html>
