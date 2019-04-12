@@ -7,6 +7,9 @@
       html {
         cursor: not-allowed;
       }
+      ::selection {
+        background-color: transparent;
+      }
       body {
         background-color: #000;
         color: #c95068;
@@ -29,6 +32,7 @@
         top: 4em;
         left: 10em;
         color: rgb(33, 33, 33);
+        color: #DDD;
       }
     </style>
   </head>
@@ -44,13 +48,20 @@
       <div id="im-it">THAT</div>
     </div>
 
+    <div id="B">
+      <div id="fuckingproblem"></div>
+      <div>w<span style="background-color: rgba(237, 113, 144, 0.3)">hy</span> are you here?</div>
+    </div>
+
     <script>
+      var solveit = document.getElementById("fuckingproblem");
       var imyour = document.getElementById("but-my-watch-sick");
       var friendi = document.getElementById("yea-my-drop-sick");
       var willtalk = document.getElementById("yea-my-glock-sick");
       var you = document.getElementById("and-my-knot-thick");
       var throughthis = document.getElementById("im-it");
       var when = new Date(2019, 5, 27, 5, 0, 0, 0);
+      var eventually = new Date(2069, 6, 11);
       (function yeah_my_drop_sick () {
         var s = (when - new Date())/1000.;
         var m = s / 60.;
@@ -60,13 +71,9 @@
         friendi.innerHTML = Math.floor(m % 60);
         willtalk.innerHTML = Math.floor(h % 24);
         you.innerHTML = Math.floor(d);
+        solveit.innerHTML = (eventually - new Date())/1000./60./60./24.;
         requestAnimationFrame(yeah_my_drop_sick);
       }())
     </script>
-
-    <div id="B">
-      w<span style="background-color: rgba(237, 113, 144, 0.3)">hy</span> are you here?
-    </div>
-    <script>
   </body>
 </html>
